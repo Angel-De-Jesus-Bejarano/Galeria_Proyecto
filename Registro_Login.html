@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+    
+    <form class="formulario" action="">
+        <div class="prueba">
+            <h1>Registrarse</h1>
+            <input type="text" placeholder="Ingresa tu nombre">
+            <input type="email" placeholder="Ingresa tu correo" checked> 
+            <input type="password" name="" id="" placeholder="Ingresa una contraseña">
+            <input type="password" name="" id="" placeholder="confirmar contraseña">
+            <input class="boton" type="button" value="Registrarse">
+            <a href="">Olvide mi contraseña</a>
+        </div>
+    </form>
+    <script>
+        function lluvia(){
+            let monto = 80;
+            let body = document.querySelector('body');
+            let i = 0;
+            while(i < monto){
+                let soltar = document.createElement('i');
+
+                let size = Math.random() * 5;
+                let posX = Math.floor(Math.random() * window.innerWidth);
+                let delay = Math.random() * -20;
+                let duracion = Math.random() * 5;
+
+
+                soltar.style.width = 0.2 + size+'px'; 
+                soltar.style.left = posX+'px';
+                soltar.style.animationDelay = delay+'s';
+                soltar.style.animationDuration = 1 + duracion+'s';
+
+                body.appendChild(soltar);
+                i++
+            }
+        }
+
+        lluvia();
+    </script>
+</body>
+</html>
